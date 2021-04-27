@@ -7,6 +7,7 @@ public class Activity2 {
 
 		int i = 5;
 
+
 		DiningTable diningTable = new DiningTable(i);
 		Philosopher philosophers[] = new Philosopher[i];
 
