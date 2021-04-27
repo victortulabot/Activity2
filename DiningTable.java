@@ -28,6 +28,7 @@ public class DiningTable {
 	}
 
     void pickup(int who) throws InterruptedException {
+        //hindi na siya pumapasok dito
 		entLock.lock();
 		states[who]=State.HUNGRY;
 		System.out.println("Philosopher " + who + " is hungry.\n");

@@ -1,7 +1,7 @@
 public class Philosopher {
 	DiningTable n;
 	int ID;
-    public Philosopher (DiningTable n, int ID){
+    public Philosopher (int ID, DiningTable n){
         this.n = n;
 		this.ID = ID;
     }
