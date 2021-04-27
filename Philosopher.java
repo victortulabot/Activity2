@@ -5,6 +5,7 @@ public class Philosopher {
         this.n = n;
 		this.ID = ID;
     }
+   
 }
 
 
