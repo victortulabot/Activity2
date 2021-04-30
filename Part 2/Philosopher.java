@@ -1,12 +1,12 @@
 import java.util.*;
 import java.util.concurrent.locks.*;
 
-public class Philosopher {
+public class Philosopher implements Runnable {
     	// Private data.
 	private int myId;
 	private int timesToEat;		// Times to eat.
 	private DiningTable mon;
-	private Thread t;	
+	public Thread t;	
 	private int sleepLength;		// How long to sleep during eating.
 	// Constructor.
 	Philosopher(int id, int numToEat, DiningTable m){
