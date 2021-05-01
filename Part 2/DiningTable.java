@@ -52,6 +52,7 @@ public class DiningTable {
 		lock.lock();
 		try{ //end eating 
 			System.out.format("Philosopher %d puts down left and right chopstick\n", i+1);
+			System.out.format("Philosopher %d is thinking\n", i+1);
 
 			state[i] = States.thinking;
 
@@ -62,7 +63,7 @@ public class DiningTable {
 				(state[left2] != States.eating) ){
 				cond[left].signal();
 			}
-			
+
 			// right neighbor will eat
 			if( (state[(i+1)%numOfPhilosophers] == States.hungry) &&
 				(state[(i+2)%numOfPhilosophers] != States.eating) ){
