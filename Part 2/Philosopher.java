@@ -13,7 +13,8 @@ public class Philosopher implements Runnable {
 		this.myId = id;
 		this.timesToEat = numToEat;
 		this.mon = m;
-		sleepLength = 10;			
+		Random rand = new Random();
+		sleepLength = rand.nextInt(50) + 1;;			
 		t = new Thread(this);
 		t.start();
 	}
