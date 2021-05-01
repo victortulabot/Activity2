@@ -4,16 +4,16 @@ import java.util.concurrent.locks.*;
 public class Philosopher implements Runnable {
     	// Private data.
 	private int myId;
-	private int timesToEat;		// Times to eat.
+	private int timesToEat;		
 	private DiningTable mon;
 	public Thread t;	
-	private int sleepLength;		// How long to sleep during eating.
+	private int sleepLength;		
 	// Constructor.
 	Philosopher(int id, int numToEat, DiningTable m){
 		this.myId = id;
 		this.timesToEat = numToEat;
 		this.mon = m;
-		sleepLength = 10;			// Make a pause of 10 ms while eating.
+		sleepLength = 10;			
 		t = new Thread(this);
 		t.start();
 	}
@@ -27,12 +27,12 @@ public class Philosopher implements Runnable {
 			++count;
 		}		
 	}
-	// Print the state of the philosopher.
+	
 	void eat(int count){
-		System.out.format("Philosopher %d eats (%d times)\n", myId+1, count);
-		// Sleep a little bit.
+		System.out.format("Philosopher %d is eating\n", myId+1);
+
 		try {
-		    Thread.sleep(sleepLength);
+		    Thread.sleep(sleepLength); //sleep
 		} 
 		catch (InterruptedException e) {}
 	}

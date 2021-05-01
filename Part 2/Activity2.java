@@ -14,11 +14,10 @@ public class Activity2 {
 		System.out.println("Dinner is starting!");
 		System.out.println("");
 		
-		// Start philosopher threads.
+		
 		for(int i = 0; i < numOfPhilosophers; i++)
 			p[i] = new Philosopher(i, timesToEat, mon);
 		
-		// Suspend the current thread until the philosophers have not done.
 		for(int i = 0; i < numOfPhilosophers; i++)
 			try {
 				p[i].t.join();
